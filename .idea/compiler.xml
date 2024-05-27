@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../auction-site/caches/modules-2/files-2.1/org.hibernate.validator/hibernate-validator/7.0.1.Final/ec47c29170fd4d224b9b2bc55985af8185d609cd/hibernate-validator-7.0.1.Final.jar" />
+          <entry name="$PROJECT_DIR$/../auction-site/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/3.0.0/8c8eecc40da64037d7731356511c568d466f8480/jakarta.validation-api-3.0.0.jar" />
+          <entry name="$PROJECT_DIR$/../auction-site/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.5.3.Final/c88fc1d8a96d4c3491f55d4317458ccad53ca663/jboss-logging-3.5.3.Final.jar" />
+          <entry name="$PROJECT_DIR$/../auction-site/caches/modules-2/files-2.1/com.fasterxml/classmate/1.6.0/91affab6f84a2182fce5dd72a8d01bc14346dddd/classmate-1.6.0.jar" />
+        </processorPath>
+        <module name="auction.auction.main~2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auction.auction.main" target="17" />
+      <module name="auction.auction.main~1" target="17" />
+      <module name="auction.auction.test" target="17" />
+      <module name="auction.auction.test~1" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
