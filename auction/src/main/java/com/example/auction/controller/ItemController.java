@@ -2,6 +2,7 @@ package com.example.auction.controller;
 
 import com.example.auction.entity.Item;
 import com.example.auction.model.AddItemInput;
+import com.example.auction.model.UpdateItemInput;
 import com.example.auction.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,5 +34,20 @@ public class ItemController {
         item.setStartingPrice(input.getStartingPrice());
         Item savedItem = itemService.addItem(item);
         return new ResponseEntity<>(savedItem, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateItem(@PathVariable Long id, @Valid @RequestBody UpdateItemInput input) {
+        Item existingItem = itemService.getItemById(id);
+        if (existingItem == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        if (input.getStartingPrice() <= existingItem.getStartingPrice()) {
+            return new ResponseEntity<>("New price must be greater than the current price", HttpStatus.BAD_REQUEST);
+        }
+        existingItem.setDescription(input.getDescription());
+        existingItem.setStartingPrice(input.getStartingPrice());
+        Item updatedItem = itemService.updateItem(existingItem);
+        return new ResponseEntity<>(updatedItem, HttpStatus.OK);
     }
 }

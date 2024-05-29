@@ -13,7 +13,7 @@ public class Item {
     private Long id;
     private String name;
     private String description;
-    private int startingPrice;
+    private Double startingPrice;
 
     // Getter 및 Setter
     public Long getId() {
@@ -40,11 +40,11 @@ public class Item {
         this.description = description;
     }
 
-    public int getStartingPrice() {
+    public Double getStartingPrice() {
         return startingPrice;
     }
 
-    public void setStartingPrice(int startingPrice) {
+    public void setStartingPrice(Double startingPrice) {
         this.startingPrice = startingPrice;
     }
 }

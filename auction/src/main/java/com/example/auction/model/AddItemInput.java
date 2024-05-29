@@ -16,7 +16,7 @@ public class AddItemInput {
 
     @NotNull(message = "시작 가격을 입력해야 합니다.")
     @Range(min = 100, max = 10000000, message = "시작 가격은 100원에서 10,000,000원 사이여야 합니다.")
-    private Integer startingPrice;
+    private Double startingPrice; // Integer에서 Double로 변경
 
     // Getter 및 Setter
     public String getName() {
@@ -35,11 +35,11 @@ public class AddItemInput {
         this.description = description;
     }
 
-    public Integer getStartingPrice() {
+    public Double getStartingPrice() { // 반환 타입을 Double로 변경
         return startingPrice;
     }
 
-    public void setStartingPrice(Integer startingPrice) {
+    public void setStartingPrice(Double startingPrice) { // 매개변수 타입을 Double로 변경
         this.startingPrice = startingPrice;
     }
 }
